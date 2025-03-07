@@ -1,0 +1,14 @@
+#!/bin/bash
+
+OWNER="100-hours-a-week"
+REPO="noah.kim-til"
+GITHUB_API_URL="https://api.github.com/repos/$OWNER/$REPO/commits"
+
+LATEST_COMMIT_DATE=$(curl -s $GITHUB_API_URL | jq -r '.[0].commit.committer.date' | cut -d'T' -f1)
+TODAY=$(date -u +"%Y-%m-%d")
+
+if [ "$LATEST_COMMIT_DATE" == "$TODAY" ]; then
+    :
+else
+    osascript -e 'display alert "TIL 알림" message "오늘 TIL을 작성하지 않았습니다!"'
+fi
