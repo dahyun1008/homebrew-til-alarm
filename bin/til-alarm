@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo "GitHub 사용자명을 입력하세요:"
-read OWNER
+OWNER="100-hours-a-week"
 
 echo "Repository명을 입력하세요:"
 read REPO
