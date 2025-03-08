@@ -4,5 +4,6 @@ class TilAlarm < Formula
     url "https://github.com/dahyun1008/homebrew-til-alarm/releases/download/0.1.0/til-alarm"
     def install
         bin.install "til-alarm"
+        bin.install "til-alarm-crontab"
     end
 end
