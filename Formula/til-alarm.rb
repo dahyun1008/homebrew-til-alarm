@@ -3,9 +3,8 @@ class TilAlarm < Formula
     homepage "https://github.com/dahyun1008/homebrew-til-alarm"
     url "https://github.com/dahyun1008/homebrew-til-alarm/releases/download/0.1.1/til-alarm-0.1.1.tar.gz"
     def install
-        system "ls", "-R"
-        bin.install "bin/til-alarm"
-        bin.install "bin/til-alarm-crontab"
+        bin.install "til-alarm"
+        bin.install "til-alarm-crontab"
 
         chmod "+x", bin/"til-alarm"
         chmod "+x", bin/"til-alarm-crontab"
